@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="hannes scherthan — personal site.">
+  <title>hannes scherthan — h4nn3sul</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:#080808; color:#f3f3f3; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; min-height:100vh; background:#080808; }
+    a { color:inherit; }
+    .page { width:min(1120px, calc(100% - 48px)); margin:0 auto; }
+    header { height:84px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #242424; }
+    .wordmark { font-size:13px; font-weight:650; letter-spacing:.02em; text-decoration:none; }
+    .handle { color:#898989; font-size:12px; letter-spacing:.08em; }
+    main { min-height:calc(100svh - 142px); display:flex; flex-direction:column; justify-content:center; padding:100px 0 120px; }
+    .eyebrow { display:flex; align-items:center; gap:11px; color:#9b9b9b; font-size:11px; letter-spacing:.17em; text-transform:uppercase; }
+    .dot { width:6px; height:6px; border-radius:50%; background:#b6f36a; box-shadow:0 0 12px #b6f36a66; }
+    h1 { margin:26px 0 0; max-width:900px; font-size:clamp(56px, 11vw, 132px); line-height:.88; letter-spacing:-.09em; font-weight:600; }
+    h1 span { display:block; color:#747474; }
+    .bottom { display:flex; justify-content:space-between; align-items:end; gap:32px; margin-top:70px; }
+    .note { max-width:330px; margin:0; color:#8b8b8b; font-size:14px; line-height:1.7; }
+    .contact { display:inline-flex; align-items:center; gap:12px; text-decoration:none; font-size:14px; }
+    .contact span { color:#858585; transition:transform .2s ease, color .2s ease; }
+    .contact:hover span { color:#f3f3f3; transform:translate(3px,-3px); }
+    footer { display:flex; justify-content:space-between; padding:20px 0 26px; border-top:1px solid #242424; color:#696969; font-size:11px; letter-spacing:.04em; }
+    @media (max-width:600px) { .page { width:calc(100% - 36px); } header { height:70px; } main { min-height:calc(100svh - 126px); padding:70px 0 84px; } h1 { font-size:clamp(52px, 14vw, 84px); } .bottom { align-items:flex-start; flex-direction:column; gap:28px; margin-top:50px; } footer { font-size:10px; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none !important; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <a class="wordmark" href="#top">hannes scherthan</a>
+      <span class="handle">h4nn3sul</span>
+    </header>
+    <main id="top">
+      <div class="eyebrow"><span class="dot" aria-hidden="true"></span> personal website</div>
+      <h1>hannes <span>scherthan</span></h1>
+      <div class="bottom">
+        <p class="note">a little corner of the internet. more soon.</p>
+        <a class="contact" href="mailto:scherthanhannessjp@gmail.com">scherthanhannessjp@gmail.com <span aria-hidden="true">↗</span></a>
+      </div>
+    </main>
+    <footer><span>h4nn3sul</span><span>© <span id="year"></span> hannes scherthan</span></footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
